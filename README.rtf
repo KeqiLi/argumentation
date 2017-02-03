@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;\csgray\c0;\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Modification of code:\
+
+\b0 \
+I have added the condition for proof_standard dialectical_validity because it was missing from the base code caes.py.\
+\
+elif standard == 'dialectical_validity':\
+result = self.meets_proof_standard(proposition, 'scintilla') and not(self.meets_proof_standard(proposition.negate(), 'scintilla'))\
+\
+I also modified the main function, so that when a user tries to run the program, there will be options for the user to choose.\
+
+\b \
+Please follow the instructions on how to run the program.\
+The template-burden.txt is a template for the syntax and formatting instruction and it also works as the test example I described in the report.
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 \
+Make sure the text file you want to process is in the same directory as the caes.py file. When you are at the directory, please enter the following line at the terminal:\
+\
+python3.4 caes.py\
+\
+Then you will be asked a few questions to customise the program.\
+\
+Would you like to enable the debug mode? (y/n)\
+enter 
+\f2\b y
+\f1\b0  for yes or enter 
+\f2\b n 
+\f1\b0 for no, exactly one character\
+\
+You will then be asked to enter the filename.\
+eg. case1.txt\
+\
+After that, the results will be printed with the customised configuration. The last section of the output will be the dialogue states record and they mark the current arguments, current bearer of BOP and current acceptability of the target. By allowing the user to input options, the program does not require the user to modify the codes.\
+}

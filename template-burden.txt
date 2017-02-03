@@ -1,0 +1,48 @@
+# Case 1 - Should I go to bed?
+
+PROPOSITIONS:
+murder
+killing
+malice
+selfdef
+-selfdef
+exclude187
+exclude197
+w1def
+w2run
+w1unreliable
+w2unreliable
+
+ARGUMENTS:
+# Please follow such structure:
+# P/D argument_name: [premise, premise, …], ~[exception, exception, …] => conclusion
+# Please follow the exact order above; however, this is made space insensitive.
+
+P arg1: [killing, malice], ~[exclude187] => murder
+D arg2: [selfdef], ~[exclude197] => exclude187
+D arg3: [w1def], ~[w1unreliable] => selfdef
+P arg4: [w2run], ~[w2unreliable] => -selfdef
+
+
+ASSUMPTIONS:
+killing
+malice
+w1def
+w2run
+
+WEIGHTS:
+arg1: 0.5
+arg2: 0.5
+arg3: 0.5
+arg4: 0.5
+
+PROOF STANDARDS:
+# The proof standards available are 
+# ‘scintilla’, ‘preponderance’, ‘clear_and_convincing’
+# ‘beyond_reasonable_doubt’, ‘dialectical_validity’
+selfdef: preponderance
+
+TARGET:
+# For Burden of Proof case, just use one single target
+# Can use - to mean negation
+murder
